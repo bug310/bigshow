@@ -5,71 +5,63 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇸🇬 阿里云_新加坡_vmess, server: tw.bug310.xyz, port: 37733, type: vmess, uuid: 497f723d-f0b0-4dbd-964f-666630e1da62, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: tw.bug310.xyz}}}
-  - {name: 🇸🇬 阿里云_新加坡_trojan, server: tw.bug310.xyz, port: 22212, type: trojan, password: rORxAkA2nv}
-  - {name: 🇭🇰 亚马逊_香港_vmess, server: ls.bug310.xyz, port: 26321, type: vmess, uuid: 03443514-efd6-47c6-93df-be5880eb4a81, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: ls.bug310.xyz}}}
+  - {name: 🇭🇰 亚马逊_香港_vmess, server: ls.bug310.xyz, port: 46321, type: vmess, uuid: 03443514-efd6-47c6-93df-be5880eb4a81, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: ls.bug310.xyz}}}
   - {name: 🇭🇰 亚马逊_香港_trojan, server: ls.bug310.xyz, port: 27284, type: trojan, password: KjV6jEhBGN}
   - {name: 🇭🇰 谷歌云_香港_vmess, server: hk.bug310.xyz, port: 47715, type: vmess, uuid: f3b1437d-cd0d-42da-d0a8-973f3b925cbc, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: hk.bug310.xyz}}}
   - {name: 🇭🇰 谷歌云_香港_trojan, server: hk.bug310.xyz, port: 22300, type: trojan, password: gg41VA3DKj}
-  - {name: 🇺🇲 谷歌云_洛杉矶_vmess, server: us.bug310.xyz, port: 19431, type: vmess, uuid: ce1ed3ca-8ccc-48dc-8848-e0d5435b2a8d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: us.bug310.xyz}}}
-  - {name: 🇺🇲 谷歌云_洛杉矶_trojan, server: us.bug310.xyz, port: 35293, type: trojan, password: S8MYcBBKC8}
-  - {name: 🇰🇷 谷歌云_首尔_vmess, server: se.bug310.xyz, port: 26759, type: vmess, uuid: 8a9e5e91-3e2a-4917-a0a7-100cc0a23905, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: se.bug310.xyz}}}
-  - {name: 🇰🇷 谷歌云_首尔_trojan, server: se.bug310.xyz, port: 53720, type: trojan, password: bUbDZJLvzS}
-  - {name: 🇨🇳 谷歌云_东京_vmess, server: dj.bug310.xyz, port: 50091, type: vmess, uuid: 30a4f77a-81e1-4ad1-a55c-1e3ac8ea0251, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: dj.bug310.xyz}}}
-  - {name: 🇨🇳 谷歌云_东京_trojan, server: dj.bug310.xyz, port: 31816, type: trojan, password: vennwHZKw4}
+  - {name: 🇭🇰 谷歌云_香港2_vmess, server: hk2.bug310.xyz, port: 54671, type: vmess, uuid: 4d8e1495-9c46-49d7-b1f6-c700fdea1523, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: hk2.bug310.xyz}}}
+  - {name: 🇭🇰 谷歌云_香港2_trojan, server: hk2.bug310.xyz, port: 32643, type: trojan, password: k0hqnASmJf}
+  - {name: 🇸🇬 谷歌云_新加坡_vmess, server: sg.bug310.xyz, port: 42213, type: vmess, uuid: 7548c49e-dfc3-4a6f-84db-1074bb139d6e, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: sg.bug310.xyz}}}
+  - {name: 🇸🇬 谷歌云_新加坡_trojan, server: sg.bug310.xyz, port: 32190, type: trojan, password: HkaRQjO1kL}
+  - {name: 🇨🇳 谷歌云_台北_vmess, server: tb.bug310.xyz, port: 16861, type: vmess, uuid: 3b61eb6c-edc1-41d5-daff-3b19f440b2e3, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /bug, headers: {Host: tb.bug310.xyz}}}
+  - {name: 🇨🇳 谷歌云_台北_trojan, server: tb.bug310.xyz, port: 59239, type: trojan, password: Ui3OZQeAk7}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -79,39 +71,39 @@ proxy-groups:
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
       - 🎯 全球直连
   - name: 🍎 苹果服务
     type: select
@@ -119,18 +111,16 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - ♻️ 自动选择
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -146,18 +136,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇸🇬 阿里云_新加坡_vmess
-      - 🇸🇬 阿里云_新加坡_trojan
       - 🇭🇰 亚马逊_香港_vmess
       - 🇭🇰 亚马逊_香港_trojan
       - 🇭🇰 谷歌云_香港_vmess
       - 🇭🇰 谷歌云_香港_trojan
-      - 🇺🇲 谷歌云_洛杉矶_vmess
-      - 🇺🇲 谷歌云_洛杉矶_trojan
-      - 🇰🇷 谷歌云_首尔_vmess
-      - 🇰🇷 谷歌云_首尔_trojan
-      - 🇨🇳 谷歌云_东京_vmess
-      - 🇨🇳 谷歌云_东京_trojan
+      - 🇭🇰 谷歌云_香港2_vmess
+      - 🇭🇰 谷歌云_香港2_trojan
+      - 🇸🇬 谷歌云_新加坡_vmess
+      - 🇸🇬 谷歌云_新加坡_trojan
+      - 🇨🇳 谷歌云_台北_vmess
+      - 🇨🇳 谷歌云_台北_trojan
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
